@@ -10,6 +10,7 @@ root.render(
   <React.StrictMode>
     <App />
     <Saludo></Saludo>
+    <Saludo></Saludo>
   </React.StrictMode>
 );
 
