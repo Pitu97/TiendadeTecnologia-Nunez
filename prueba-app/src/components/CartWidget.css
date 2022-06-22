@@ -1,0 +1,6 @@
+img {
+    background-color: darkgray;
+    padding: 2px;
+    border-radius: 5px;
+    display: flex;
+}
