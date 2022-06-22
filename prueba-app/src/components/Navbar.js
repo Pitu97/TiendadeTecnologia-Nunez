@@ -5,8 +5,8 @@ function Navbar() {
     <header className='navbar'>
         <h3>MAMBA</h3>
         <button>Inicio</button>
-        <a scr="#">Nosotros</a>
-        <a src="#">Productos</a>
+        <a href='#'>Nosotros</a>
+        <a href='#'>Productos</a>
     </header>
   );
 }
