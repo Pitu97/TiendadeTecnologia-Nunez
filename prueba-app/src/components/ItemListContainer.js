@@ -6,10 +6,12 @@ function ItemListContainer() {
   return (
     <div className="List">
         <h2>Catalogo de productos</h2>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <div className="List">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
     </div>
   );
 }
