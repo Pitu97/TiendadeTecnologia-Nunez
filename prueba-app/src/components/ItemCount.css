@@ -1,0 +1,17 @@
+.Card {
+    height: 300px;
+    width: 250px;
+    background-color: blueviolet;
+}
+
+.Counter {
+    height: 25px;
+    width: 200px;
+    background-color: darkorange;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-top: 150px;
+    margin-bottom: 15px;
+}

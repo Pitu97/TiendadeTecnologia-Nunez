@@ -6,9 +6,9 @@ function Navbar() {
   return (
     <header className='navbar'>
         <h3>MAMBA</h3>
-        <button>Inicio</button>
-        <a src='#'>Nosotros</a>
-        <a scr='#'>Productos</a>
+        <a href='#'><button>Inicio</button></a>
+        <a href='#'>Nosotros</a>
+        <a href='#'>Productos</a>
         <CartWidget />
     </header>
   );

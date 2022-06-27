@@ -1,16 +1,17 @@
 import './ItemListContainer.css';
-import Card from './Card.js';
+import ItemCount from './ItemCount.js';
 
 
-function ItemListContainer() {
+function ItemListContainer({ greeting }) {
   return (
-    <div className="List">
-        <h2>Catalogo de productos</h2>
+    <div>
+        <h2>{greeting}</h2>
+        <h3>Catalogo de productos</h3>
         <div className="List">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <ItemCount stock="20" initial="1"/>
+          <ItemCount stock="15" initial="1"/>
+          <ItemCount stock="30" initial="1"/>
+          <ItemCount stock="0" initial="1"/>
         </div>
     </div>
   );
