@@ -1,0 +1,24 @@
+.Card {
+    height: 350px;
+    width: 250px;
+    background-color: blueviolet;
+    margin: 25px;
+    border-radius: 15%;
+}
+
+.Card h4 {
+    font-size: 20px;
+    color: darkorange;
+}
+
+.Datos {
+    color: white;
+}
+
+.Detalle {
+    margin-top: 80px;
+    width: 120px;
+    height: 35px;
+    background-color: darkorange;
+    border-radius: 5px;
+}

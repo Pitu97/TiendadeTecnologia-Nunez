@@ -1,11 +1,13 @@
-.List{
+.Catalogo{
     width: 80%;
     background-color: darkorange;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 10%;
     height: 900px;
+    display: inline-block;
+}
+
+.List{
+    display: inline-block;
+    justify-content: space-around; 
 }
 
 h2 {

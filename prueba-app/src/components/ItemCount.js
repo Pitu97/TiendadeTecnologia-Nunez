@@ -17,22 +17,17 @@ function ItemCount({ stock, initial }) {
     }
   }
   const onAdd =() => {
-    if(stock != 0 && num < stock) {
+    if(stock !== 0 && num < stock) {
       console.log(num);
     }
   }
 
   return (
-    <div className="Card">
-        <h4>Nombre</h4>
-        <p>stock={stock}</p>
-        <div className="Counter">
-          <button onClick={resta}>-</button>
-          <p>{num}</p>
-          <button onClick={suma}>+</button>
-        </div>
-        <button onClick={onAdd}>Agregar al Carrito</button>
-    </div>
+    <><div className="Counter">
+      <button onClick={resta} className="Botones">-</button>
+      <p>{num}</p>
+      <button onClick={suma} className="Botones">+</button>
+    </div><button onClick={onAdd} className="Agregar">Agregar al Carrito</button></>
   );
 }
 
