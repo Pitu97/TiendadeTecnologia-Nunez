@@ -16,7 +16,7 @@ function ItemListContainer({ greeting }) {
     <section className='Catalogo'>
       <h2>{greeting}</h2>
       <div className='List'>
-        <ItemList item={info}/>    
+        <ItemList items={info}/>    
       </div>
     </section>
   );
