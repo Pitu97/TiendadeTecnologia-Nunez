@@ -9,7 +9,7 @@ function Item(props) {
     <p className='Datos'>{props.precio}</p>
     <p className='Datos'>Stock = {props.stock}</p>
     <button className='Detalle'>Ver Mas</button>
-    <ItemCount stock={props.stock} initial="1" />
+    <ItemCount stock={props.stock} initial={1} />
     </div>
   );
 }

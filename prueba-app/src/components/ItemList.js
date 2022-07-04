@@ -8,7 +8,7 @@ function ItemList({items}) {
         <h3>Catalogo de Productos</h3>
     </div>
     <div className='Cat'>
-        {items && items.map(x => <Item nombre={x.nombre} precio={x.precio} stock={x.stock} />)}
+        {items && items.map(item => <Item nombre={item.nombre} precio={item.precio} stock={item.stock} />)}
     </div>
     </>
   );
