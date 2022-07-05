@@ -1,0 +1,14 @@
+.Det{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Det h3{
+    color: blueviolet;
+}
+
+.Det p{
+    margin-left: 10px;
+    margin-right: 10px;
+}

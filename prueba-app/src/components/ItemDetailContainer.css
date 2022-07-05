@@ -1,0 +1,5 @@
+.ItemDetail{
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+}

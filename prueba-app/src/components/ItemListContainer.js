@@ -13,12 +13,12 @@ function ItemListContainer({ greeting }) {
   }, [])
 
   return (
-    <section className='Catalogo'>
+    <>
       <h2>{greeting}</h2>
       <div className='List'>
         <ItemList items={info}/>    
       </div>
-    </section>
+    </>
   );
 }
 

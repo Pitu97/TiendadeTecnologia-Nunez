@@ -1,4 +1,4 @@
-[{"id":1,"nombre":"Mouse","precio":"$143.85","stock":2},
-{"id":2,"nombre":"Auriculares","precio":"$566.39","stock":38},
-{"id":3,"nombre":"Monitor","precio":"$839.18","stock":32},
-{"id":4,"nombre":"Teclado","precio":"$221.31","stock":46}]
+[{"id":1,"nombre":"Mouse Logitech M280","precio":"$1274.85","stock":12,"descripcion":"Contiene usb inalámbrico.Orientación de la mano: ambidiestro.Cuenta con interruptor de ahorro de energía."},
+{"id":2,"nombre":"Auriculares Logitech H390","precio":"$5199.39","stock":38,"descripcion":"Con micrófono incorporado.Tipo de conector: USB-A.Color: Negro.El largo del cable es de 2.33 m."},
+{"id":3,"nombre":"Monitor Samsung F24T35","precio":"$44499.18","stock":32,"descripcion":"Ergonómico y apto para diversos usos.Función antighosting incorporada.Tipo de teclado: mecánico."},
+{"id":4,"nombre":"Teclado Redragon K552","precio":"$7829.31","stock":46,"descripcion":"Pantalla led de 24 pulgadas.Resolucion:1920x1080.Tipos de conexion: D-Sub, HDMI 1.4."}]
