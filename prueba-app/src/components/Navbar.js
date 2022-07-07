@@ -9,8 +9,8 @@ function Navbar() {
         <h3>MAMBA</h3>
         <nav>
           <ul>
-            <li><NavLink activeClassName='active' to='/'>Home</NavLink></li>
-            <li></li><NavLink activeClassName='active' to='/item'>Productos</NavLink>
+            <li><NavLink activeClass='active' to='/'>Home</NavLink></li>
+            <li></li><NavLink activeClass='active' to='/item'>Productos</NavLink>
           </ul>         
         </nav>
         <CartWidget />
