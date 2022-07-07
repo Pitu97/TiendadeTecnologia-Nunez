@@ -3,7 +3,7 @@ import ItemList from './ItemList.js';
 import './ItemListContainer.css';
 
 
-function ItemListContainer({ greeting }) {
+function ItemListContainer() {
   const [info, setInfo] = useState([])
 
   useEffect(() =>{
@@ -11,10 +11,9 @@ function ItemListContainer({ greeting }) {
     .then((resp) => resp.json())
     .then((data) => setTimeout(()=>{setInfo(data)}, 2000))
   }, [])
-
+console.log(info)
   return (
     <>
-      <h2>{greeting}</h2>
       <div className='List'>
         <ItemList items={info}/>    
       </div>

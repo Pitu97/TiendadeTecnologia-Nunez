@@ -1,13 +1,14 @@
 .Catalogo{
     width: 80%;
     background-color: darkorange;
-    height: 900px;
     display: inline-block;
+    height: 100%;
 }
 
 .List{
     display: inline-block;
-    justify-content: space-around; 
+    justify-content: space-around;
+    align-items: center;
 }
 
 h2 {

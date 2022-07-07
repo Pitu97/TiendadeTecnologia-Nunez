@@ -1,6 +1,5 @@
 .Det{
-    display: inline-flex;
-    flex-direction: row;
+    display: inline;
     justify-content: space-around;
 }
 

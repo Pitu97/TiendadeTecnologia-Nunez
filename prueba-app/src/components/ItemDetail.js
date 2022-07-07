@@ -1,12 +1,13 @@
 import './ItemDetail.css';
 
 
-function ItemDetail({items}) {
- 
+function ItemDetail({item}) {
+  
+
   return (
     <>
     <div className='Det'>
-        {items && items.map(item => (<><h3>{item.nombre}</h3><p>{item.precio}</p><p>{item.descripcion}</p></>))}
+        <><h3>{item.nombre}</h3><p>{item.precio}</p><p>{item.descripcion}</p></>
     </div>
     </>
   );

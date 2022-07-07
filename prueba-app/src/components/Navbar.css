@@ -6,3 +6,28 @@
     background-color: blueviolet;
     color:darkorange;
 }
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 2rem;
+    width: 15rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: darkorange;
+}
+
+.navbar a:hover, .navbar a:active, .navbar a.active {
+    color: white;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid white;
+}

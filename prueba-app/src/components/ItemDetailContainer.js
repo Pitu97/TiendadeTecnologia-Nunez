@@ -1,23 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import './ItemDetailContainer.css';
+import { useParams } from 'react-router-dom';
 
 function ItemDetailContainer() {
-    const [detail, setDetail] = useState([])
-
+    const [detail, setDetail] = useState({})
+    const {id} = useParams();
+    console.log(id);
     const getItem = () => {
         fetch('data.json')
-        .then((response) => {return response.json()})
-        .then((data) => setTimeout(()=>{setDetail(data)}, 2000))
+        .then((data) => {
+          //const i = data.filter(item => item.id !== parseInt(id))
+          //setDetail(i) 
+          console.log(data.json());
+        })
     }
+
+    useEffect(() => {
+      getItem();
+    },[])
   
     return (
-      <section className='Detalle'>
+      <>
         <div className='ItemDetail'>
-          <button onClick={getItem}>Ver Detalle</button>  
-          <ItemDetail items={detail} />    
+          <ItemDetail item={detail} />    
         </div>
-      </section>
+      </>
     );
   }
   
