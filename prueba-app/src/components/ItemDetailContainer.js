@@ -7,36 +7,28 @@ function ItemDetailContainer() {
     const [detail, setDetail] = useState([])
     const {id} = useParams();
     console.log(id);
+
     const getItem = () => {
-      fetch('./data.json')
-    .then((resp) => resp.json())
-   .then((data) => setDetail(data[0]))
-        //fetch('data.json')
-        //.then((resp) => resp.json()) 
+      fetch('data.json')
+      .then((response) => {return response.json()})
+      .then((data) => {const i = data && data.filter(item => item.id === 3)
+        setDetail(i)
+        console.log(i)})
         //.then((data) => {
-          //const i = data.find(item => item.id == parseInt(id))
+          //const i = data && data.filter(item => item.id === id)
           //console.log(i);
           //setDetail(i) 
        // })
     }
 
-    //useEffect(() => {
-      //getItem(); 
-      //fetch('data.json')
-      //.then((resp) => resp.json())
-      //.then((data) => console.log(data))
-     //.then((res) => setDetail(res))
-    //},[])
-    useEffect( () =>{
-      fetch("data.json")
-          .then(resp => resp.json())
-          .then(res => setDetail(res))
-}, [] );
-  console.log(detail);
+    useEffect(() => {
+      getItem(); 
+    },[])
+
     return (
       <>
         <div className='ItemDetail'>
-          <ItemDetail item={detail} />    
+          <ItemDetail items={detail} id={id} />    
         </div>
       </>
     );

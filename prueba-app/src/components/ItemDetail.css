@@ -1,13 +1,49 @@
 .Det{
-    display: inline;
-    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+    float: left;
+    height: 900px;
+    text-align: left;
 }
 
-.Det h3{
+.Det .text {
+    width: 30%;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.Det h2{
     color: blueviolet;
 }
 
 .Det p{
+    font-weight: bold;
+    font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 50px;
 }
+
+.Det img {
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.Det .boton {
+    background-color: blueviolet;
+    color: #ffcc00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 50px;
+}
+
+.Det .boton:hover {
+    background-color: white;
+    color: blueviolet;
+}
+

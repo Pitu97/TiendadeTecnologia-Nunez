@@ -4,7 +4,23 @@
     align-items: center;
     justify-content: space-around;
     background-color: blueviolet;
-    color:darkorange;
+    color:#ffcc00;
+}
+
+.navbar div {
+    display: flex;
+}
+
+.navbar .Titulo:hover {
+    color: #ffcc00;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.navbar h3 {
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 .navbar ul {
@@ -23,11 +39,17 @@
 
 .navbar a {
     text-decoration: none;
-    color: darkorange;
+    color: #ffcc00;
 }
 
 .navbar a:hover, .navbar a:active, .navbar a.active {
     color: white;
     padding-bottom: 0.25rem;
     border-bottom: 4px solid white;
+}
+
+.navbar .brand {
+    width: 40px;
+    height: 50px;
+    padding: 10px;
 }

@@ -9,7 +9,7 @@ function Item(props) {
       console.log(num);
     }
   }
-  console.log(props);
+  //console.log(props); 
   return (
     <div className='Card'>
     <h4>{props.nombre}</h4>
