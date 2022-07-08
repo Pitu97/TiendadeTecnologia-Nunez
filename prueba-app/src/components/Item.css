@@ -1,24 +1,41 @@
 .Card {
-    height: 375px;
-    width: 250px;
+    height: 400px;
+    width: 260px;
     background-color: blueviolet;
     margin: 50px;
-    border-radius: 15%;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.Card img {
+    border-radius: 15px;
+    margin-left: 8px;
+    height: 200px;
+    width: 240px;
 }
 
 .Card h4 {
+    margin: 0;
     font-size: 20px;
     color: #ffcc00;
+    font-style: italic;
 }
 
 .Datos {
+    margin: 0;
     color: white;
+    font-weight: bold;
 }
 
 .Detalle {
-    margin-top: 80px;
-    width: 120px;
+    width: 200px;
     height: 35px;
     background-color: #ffcc00;
     border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: blueviolet;
 }

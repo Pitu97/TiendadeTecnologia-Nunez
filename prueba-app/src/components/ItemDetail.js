@@ -1,9 +1,15 @@
 import './ItemDetail.css';
-
+import ItemCount from './ItemCount';
 
 function ItemDetail({items, id}) {
   console.log(id);
   //const filtrado = items && items.filter(item => item.id === 1);
+
+  const Add =(num) => {
+    if(items.stock !== 0 && num <= items.stock) {
+      console.log(num);
+    }
+  }
 
   return (
     <>
@@ -13,7 +19,11 @@ function ItemDetail({items, id}) {
                                               <h2>{item.nombre}</h2>
                                               <p>{item.precio}</p>
                                               <p>{item.descripcion}</p>
-                                              <button className='boton'>Comprar</button>
+                                              <p>Stock: {item.stock}</p>
+                                              <div className='botones'>
+                                                <button className='boton'>Comprar</button>
+                                                <ItemCount stock={item.stock} initial={1} onAdd={Add}/>
+                                              </div>
                                             </div>
                                             <img src={item.img} atl="imagen" />
                                           </>))}
