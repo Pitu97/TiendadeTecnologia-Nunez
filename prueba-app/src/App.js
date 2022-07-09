@@ -11,9 +11,9 @@ function App() {
       <Navbar />
       <div className='Catalogo'>
         <Routes>
-          <Route exact path="/" element={<ItemListContainer />}></Route>
-          <Route exact path="/category/:id" element={<ItemListContainer />}></Route>
-          <Route exact path="/item/" element={<ItemDetailContainer />}></Route>
+          <Route path="/" element={<ItemListContainer />}></Route>
+          {/* <Route path="/category/:id" element={<ItemListContainer />}></Route> */}
+          <Route path="/item/:idItem" element={<ItemDetailContainer />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>

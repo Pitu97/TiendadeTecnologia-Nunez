@@ -7,11 +7,12 @@ function ItemListContainer() {
   const [info, setInfo] = useState([])
 
   useEffect(() =>{
-    fetch('data.json')
+    fetch('datos.json')
     .then((resp) => resp.json())
     .then((data) => setTimeout(()=>{setInfo(data)}, 2000))
   }, [])
 console.log(info)
+
   return (
     <>
       <div className='List'>

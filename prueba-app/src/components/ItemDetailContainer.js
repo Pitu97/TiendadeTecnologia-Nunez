@@ -2,18 +2,21 @@ import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import './ItemDetailContainer.css';
 import { useParams } from 'react-router-dom';
+import datos from '../components/data/datos';
 
 function ItemDetailContainer() {
-    const [detail, setDetail] = useState([])
-    const {id} = useParams();
-    console.log(id);
+    const [detail, setDetail] = useState({})
+    const {idItem} = useParams();
+    console.log(idItem);
 
     const getItem = () => {
-      fetch('data.json')
-      .then((response) => {return response.json()})
-      .then((data) => {const i = data && data.filter(item => item.id === 3)
-        setDetail(i)
-        console.log(i)})
+        const promiseData = new Promise((resolve,reject) => {
+        resolve(datos)
+        })
+        .then((data) => setDetail(data.find((i) => i.id === parseInt(idItem))));
+        // .then((data) => {const i = data && data.find(item => item.id === 7)
+        //   setDetail(i)
+        //   console.log(i)})
         //.then((data) => {
           //const i = data && data.filter(item => item.id === id)
           //console.log(i);
@@ -22,16 +25,16 @@ function ItemDetailContainer() {
     }
 
     useEffect(() => {
-      getItem(); 
+      getItem();
     },[])
-
+console.log(detail);
     return (
       <>
         <div className='ItemDetail'>
-          <ItemDetail items={detail} id={id} />    
+          <ItemDetail item={detail} />     
         </div>
       </>
     );
   }
   
-  export default ItemDetailContainer;
+  export default ItemDetailContainer; 

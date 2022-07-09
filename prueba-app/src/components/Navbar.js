@@ -14,7 +14,7 @@ function Navbar() {
           <ul>
             <li><NavLink activeClass='active' to='/'>Home</NavLink></li>
             <li><NavLink activeClass='active' to='/category/1'>Categoria</NavLink></li>
-            <li><NavLink activeClass='active' to='/item'>Detalle</NavLink></li>
+            {/* <li><NavLink activeClass='active' to='/item'>Detalle</NavLink></li> */}
           </ul>         
         </nav>
         <CartWidget />
