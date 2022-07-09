@@ -12,7 +12,7 @@ function App() {
       <div className='Catalogo'>
         <Routes>
           <Route path="/" element={<ItemListContainer />}></Route>
-          {/* <Route path="/category/:id" element={<ItemListContainer />}></Route> */}
+          <Route path="/category/:id" element={<ItemListContainer />}></Route> 
           <Route path="/item/:idItem" element={<ItemDetailContainer />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

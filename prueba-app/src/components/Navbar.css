@@ -24,6 +24,7 @@
 }
 
 .navbar ul {
+    width: 500px;
     list-style: none;
     display: flex;
     padding: 0;

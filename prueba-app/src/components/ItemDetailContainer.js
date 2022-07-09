@@ -25,7 +25,7 @@ function ItemDetailContainer() {
     }
 
     useEffect(() => {
-      getItem();
+      setTimeout(()=>{getItem();},2000)
     },[])
 console.log(detail);
     return (
