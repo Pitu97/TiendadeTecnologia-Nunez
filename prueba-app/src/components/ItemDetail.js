@@ -1,11 +1,14 @@
 import './ItemDetail.css';
 import ItemCount from './ItemCount';
+import { useState } from 'react';
 
 function ItemDetail({item}) {
+  const [count, setCount] = useState("")
 
   const Add =(num) => {
     if(item.stock !== 0 && num <= item.stock) {
-      console.log(num);
+      setCount(parseInt(num))
+      console.log(count);
     }
   }
 
