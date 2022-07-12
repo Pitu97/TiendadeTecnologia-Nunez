@@ -19,7 +19,7 @@ function Navbar() {
             <li><NavLink activeClass='active' to='/category/4'>Teclados</NavLink></li>
           </ul>         
         </nav>
-        <CartWidget />
+        <Link className='Carrito' to='/cart'><CartWidget /></Link>
     </header>
   );
 }
