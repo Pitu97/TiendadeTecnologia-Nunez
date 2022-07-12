@@ -8,12 +8,12 @@ import datos from '../components/data/datos';
 function ItemListContainer() {
   const [info, setInfo] = useState([])
   const {id} = useParams();
-  console.log(id);
+  //console.log(id);
 
   const getCategory = () => {
     const promiseData = new Promise((resolve,reject) => {
       resolve(datos)
-      console.log(datos);
+      //console.log(datos);
       })
       .then((data) => {
         switch(parseInt(id)) {
@@ -40,7 +40,7 @@ function ItemListContainer() {
     setTimeout(()=>{getCategory();},2000)
   }, [id])
 
-  console.log(info)
+  //console.log(info)
 
   return (
     <>

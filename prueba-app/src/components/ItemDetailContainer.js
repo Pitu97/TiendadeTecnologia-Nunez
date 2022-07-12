@@ -7,7 +7,7 @@ import datos from '../components/data/datos';
 function ItemDetailContainer() {
     const [detail, setDetail] = useState({})
     const {idItem} = useParams();
-    console.log(idItem);
+    //console.log(idItem);
 
     const getItem = () => {
         const promiseData = new Promise((resolve,reject) => {
@@ -27,7 +27,7 @@ function ItemDetailContainer() {
     useEffect(() => {
       setTimeout(()=>{getItem();},2000)
     },[])
-console.log(detail);
+    //console.log(detail);
     return (
       <>
         <div className='ItemDetail'>

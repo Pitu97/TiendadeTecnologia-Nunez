@@ -1,16 +1,22 @@
 import './ItemDetail.css';
 import ItemCount from './ItemCount';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ItemDetail({item}) {
   const [count, setCount] = useState("")
+  const [added, setAdded] = useState(false)
 
   const Add =(num) => {
     if(item.stock !== 0 && num <= item.stock) {
       setCount(parseInt(num))
-      console.log(count);
+      setAdded(true)   
     }
   }
+
+  useEffect(() => {
+    console.log(count);
+  },[count])
 
   return (
     <>
@@ -21,8 +27,9 @@ function ItemDetail({item}) {
           <p>{item.descripcion}</p>
           <p>Stock: {item.stock}</p>
           <div className='botones'>
-            <button className='boton'>Comprar</button>
-            <ItemCount stock={item.stock} initial={1} onAdd={Add}/>
+            <Link to="/cart"><button className='boton'>Comprar</button></Link>
+            {!added && <ItemCount stock={item.stock} initial={1} onAdd={Add}/>}
+            {added && <p>Producto agregado al carrito!</p>}
           </div>
         </div>
         <img src={item.img} atl="imagen" />
