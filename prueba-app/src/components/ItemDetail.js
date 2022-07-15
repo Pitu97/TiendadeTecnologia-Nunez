@@ -27,7 +27,7 @@ function ItemDetail({item}) {
           <p>{item.descripcion}</p>
           <p>Stock: {item.stock}</p>
           <div className='botones'>
-            {!added && <Link to="/cart"><button className='boton'>Comprar</button></Link>}
+            {/* {!added && <Link to="/cart"><button className='boton'>Comprar</button></Link>} */}
             {added && <Link to="/cart"><button className='boton2'>Terminar Compra</button></Link>}
             {!added && <ItemCount stock={item.stock} initial={1} onAdd={Add}/>}
             {added && <p>Producto agregado al carrito!</p>}
