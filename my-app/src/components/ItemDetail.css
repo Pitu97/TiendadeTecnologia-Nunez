@@ -1,0 +1,69 @@
+.Det{
+    display: flex;
+    flex-flow: row wrap;
+    float: left;
+    height: 900px;
+    text-align: left;
+}
+
+.Det .text {
+    width: 30%;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.Det h2{
+    color: blueviolet;
+    font-style: italic;
+}
+
+.Det p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+.Det img {
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.Det .botones {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 550px;
+}
+
+.Det .boton {
+    background-color: blueviolet;
+    color: #ffcc00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 50px;
+}
+
+.Det .boton2 {
+    background-color: blueviolet;
+    color: #ffcc00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    width: auto;
+    height: 40px;
+    margin-top: 50px;
+}
+
+.Det .boton:hover {
+    background-color: white;
+    color: blueviolet;
+}
+

@@ -1,0 +1,57 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blueviolet;
+    color:#ffcc00;
+}
+
+.navbar div {
+    display: flex;
+}
+
+.navbar .Titulo:hover, .navbar .Carrito:hover {
+    color: #ffcc00;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.navbar h3 {
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.navbar ul {
+    width: 500px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 2rem;
+    width: 15rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.navbar a:hover, .navbar a:active, .navbar a.active {
+    color: white;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid white;
+}
+
+.navbar .brand {
+    width: 40px;
+    height: 50px;
+    padding: 10px;
+}

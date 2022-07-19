@@ -1,0 +1,18 @@
+.Catalogo{
+    width: 80%;
+    background-color: #ffcc00;
+    display: inline-block;
+    height: 100%;
+}
+
+.List{
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2 {
+    color: blueviolet;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,43 @@
+.Counter {
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.Counter p {
+    margin: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.Botones {
+    background-color: blueviolet;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+}
+
+.Agregar {
+    width: 150px;
+    height: 40px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: #ffcc00;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.Agregar:hover {
+    background-color: white;
+    color: blueviolet;
+}

@@ -1,0 +1,10 @@
+.Cat{
+   display: flex;
+   flex-flow: row wrap;
+   align-items: center;
+   justify-content: space-between; 
+}
+
+.categoria {
+   font-size: 30px;
+}
