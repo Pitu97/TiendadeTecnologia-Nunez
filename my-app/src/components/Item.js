@@ -11,7 +11,7 @@ function Item(props) {
         <h4>{props.nombre}</h4>
       </div>
       <div>
-        <p className='Datos'>{props.precio}</p>
+        <p className='Datos'>${props.precio}</p>
         <p className='Datos'>Stock = {props.stock}</p>
       </div>
       <div>

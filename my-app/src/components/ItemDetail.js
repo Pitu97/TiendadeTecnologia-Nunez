@@ -12,8 +12,8 @@ function ItemDetail({item}) {
   const Add =(num) => {
     if(item.stock !== 0 && num <= item.stock) {
       //setCount(parseInt(num))
+      addItem(item, num);
       setAdded(true);
-      addItem(item, num);   
     }
   }
 
@@ -26,7 +26,7 @@ function ItemDetail({item}) {
       <div className='Det'>        
         <div className='text'>
           <h2>{item.nombre}</h2>
-          <p>{item.precio}</p>
+          <p>${item.precio}</p>
           <p>{item.descripcion}</p>
           <p>Stock: {item.stock}</p>
           <div className='botones'>

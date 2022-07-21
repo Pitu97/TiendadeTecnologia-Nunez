@@ -8,8 +8,14 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     
     const [cart, setCart] = useState(defaultValue);
 
+    const [totalQ, setTotalQ] = useState(0);
+
+    const [totalP, setTotalP] = useState(0);
+
     const clear = () => {
         setCart([]);
+        setTotalQ(0);
+        setTotalP(0);
     }
 
     const addItem = (item, quantity) => {
@@ -24,6 +30,8 @@ export const CartProvider = ({ defaultValue = [], children }) => {
         } else {
             setCart([...cart,{ item: item, quantity: quantity }]);
         }
+        setTotalQ(totalQ + quantity);
+        setTotalP(totalP + (item.precio * quantity));
     }
 
     const isInCart = (id) => {
@@ -31,8 +39,16 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     }
 
     const removeItem = (id) => {
+        const encontrado = isInCart(id);
+        setTotalQ(totalQ - encontrado.quantity);
+        setTotalP(totalP - (encontrado.item.precio * encontrado.quantity));
         const cartCopy = [...cart].filter(e => e.item.id !== id);
         setCart(cartCopy);
+    }
+
+    const totalPrice = (id) => {
+        const encontrado = isInCart(id);
+        return encontrado.item.precio * encontrado.quantity;
     }
 
     useEffect(() => {
@@ -44,7 +60,10 @@ export const CartProvider = ({ defaultValue = [], children }) => {
         clear,
         addItem,
         isInCart,
-        removeItem
+        removeItem,
+        totalQ,
+        totalP,
+        totalPrice
     }
 
     return (
