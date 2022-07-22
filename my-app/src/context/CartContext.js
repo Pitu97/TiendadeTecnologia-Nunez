@@ -24,11 +24,13 @@ export const CartProvider = ({ defaultValue = [], children }) => {
             for ( const e of cartCopy ) {
                 if(e.item.id === item.id) {
                     e.quantity = e.quantity + quantity;
+                    e.price = e.price + (e.item.precio * quantity);
                 }
             }
             setCart(cartCopy);
         } else {
-            setCart([...cart,{ item: item, quantity: quantity }]);
+            const price = item.precio * quantity;
+            setCart([...cart,{ item: item, quantity: quantity, price: price }]);
         }
         setTotalQ(totalQ + quantity);
         setTotalP(totalP + (item.precio * quantity));
@@ -46,11 +48,6 @@ export const CartProvider = ({ defaultValue = [], children }) => {
         setCart(cartCopy);
     }
 
-    const totalPrice = (id) => {
-        const encontrado = isInCart(id);
-        return encontrado.item.precio * encontrado.quantity;
-    }
-
     useEffect(() => {
         console.log(cart)
     },[cart])
@@ -63,7 +60,6 @@ export const CartProvider = ({ defaultValue = [], children }) => {
         removeItem,
         totalQ,
         totalP,
-        totalPrice
     }
 
     return (

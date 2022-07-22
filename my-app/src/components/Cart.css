@@ -1,3 +1,76 @@
 .Cart {
     height: 900px;
 }
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin-left: 300px;
+}
+
+.datos {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+}
+
+.datos p {
+    color: white;
+}
+
+.botones3 {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    margin-left: 300px;
+}
+
+.Cart li {
+    background-color: blueviolet;
+    border-radius: 5px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 950px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.Cart li button {
+    background-color: #ffcc00;
+    color: blueviolet;
+}
+
+.Cart li button:hover {
+    color: #ffcc00;
+}
+
+.Cart img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.Cart button {
+    background-color: blueviolet;
+    color: #ffcc00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+    width: 130px;
+    height: 40px;
+}
+
+.Cart button:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+.Cart p {
+    font-weight: bold;
+    font-style: italic;
+}

@@ -1,4 +1,17 @@
-img {
+.widget {
     padding: 0;
     display: flex;
+    align-items: center;
+}
+
+.widget img {
+    height: 30px;
+}
+
+.widget p {
+    color: white;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    width: 20px;
+    padding: 1px;
 }
