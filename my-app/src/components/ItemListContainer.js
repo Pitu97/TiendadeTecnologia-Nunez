@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ItemList from './ItemList.js';
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
-import datos from '../components/data/datos';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 
 function ItemListContainer() {
@@ -10,34 +10,32 @@ function ItemListContainer() {
   const {id} = useParams();
   //console.log(id);
 
-  const getCategory = () => {
-    const promiseData = new Promise((resolve,reject) => {
-      resolve(datos)
-      //console.log(datos);
-      })
-      .then((data) => {
+  useEffect(() => {
+    
+    const base = getFirestore();
+
+    const q = collection(base, "items");
+
+    getDocs(q).then((items) => {
+        const i = items.docs.map((doc) => doc.data());
         switch(parseInt(id)) {
           case 1:
-            setInfo(data.filter((i) => i.categoria === "Mouse"));
+            setInfo(i.filter((a) => a.categoria === "Mouse"));
             break;
           case 2:
-            setInfo(data.filter((i) => i.categoria === "Auricular"));
+            setInfo(i.filter((a) => a.categoria === "Auricular"));
             break;
           case 3:
-            setInfo(data.filter((i) => i.categoria === "Monitor"));
+            setInfo(i.filter((a) => a.categoria === "Monitor"));
             break;
           case 4:
-            setInfo(data.filter((i) => i.categoria === "Teclado"));
+            setInfo(i.filter((a) => a.categoria === "Teclado"));
             break;
           default:
-            setInfo(data)
+            setInfo(i);
             break;           
-          }
-      })
-  }
-
-  useEffect(() =>{
-    setTimeout(()=>{getCategory();},2000)
+          } 
+    })
   }, [id])
 
   //console.log(info)
