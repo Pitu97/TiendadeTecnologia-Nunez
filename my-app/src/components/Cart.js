@@ -41,14 +41,14 @@ function Cart() {
             <p>Precio total: ${totalP}</p>
             <div className="botones3">
                 <button onClick={clear}>Limpiar carrito</button>
-                <button>Comprar</button> 
+                <Link to="/order"><button>Comprar</button></Link> 
             </div> 
         </div>}
         {!added && <div className="Cart">
                         <h2>Tu carrito de compras esta vacio</h2>
                         <h3>Agrega productos para comprar!</h3>
                         <Link to="/"><button>Volver al inicio</button></Link>
-                    </div>}
+                    </div>}            
         </>
     );
 }

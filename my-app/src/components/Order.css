@@ -1,0 +1,57 @@
+.order {
+    height: 900px;
+}
+
+.order p {
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.order button {
+    background-color: blueviolet;
+    color: #ffcc00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+    width: 130px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.order button:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+.order li {
+    list-style: none;
+}
+
+.item{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.formulario {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+}
+
+.formulario input {
+    width: 400px;
+    padding: 5px;
+}
+
+.formulario label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
