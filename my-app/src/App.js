@@ -16,7 +16,7 @@ function App() {
         <div className='Catalogo'>
           <Routes>
             <Route path="/" element={<ItemListContainer />}></Route>
-            <Route path="/category/:id" element={<ItemListContainer />}></Route> 
+            <Route path="/category/:cat" element={<ItemListContainer />}></Route> 
             <Route path="/item/:idItem" element={<ItemDetailContainer />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/order" element={<Order />}></Route>

@@ -13,10 +13,10 @@ function Navbar() {
         <nav>
           <ul>
             <li><NavLink activeClass='active' to='/'>Home</NavLink></li>
-            <li><NavLink activeClass='active' to='/category/1'>Mouses</NavLink></li>
-            <li><NavLink activeClass='active' to='/category/2'>Auriculares</NavLink></li>
-            <li><NavLink activeClass='active' to='/category/3'>Monitores</NavLink></li>
-            <li><NavLink activeClass='active' to='/category/4'>Teclados</NavLink></li>
+            <li><NavLink activeClass='active' to='/category/mouse'>Mouses</NavLink></li>
+            <li><NavLink activeClass='active' to='/category/auricular'>Auriculares</NavLink></li>
+            <li><NavLink activeClass='active' to='/category/monitor'>Monitores</NavLink></li>
+            <li><NavLink activeClass='active' to='/category/teclado'>Teclados</NavLink></li>
           </ul>         
         </nav>
         <Link className='Carrito' to='/cart'><CartWidget /></Link>

@@ -9,11 +9,11 @@ function ItemDetailContainer() {
     const {idItem} = useParams();
     //console.log(idItem);
 
+    const base = getFirestore();
+
+    const q = doc(base, "items", idItem)
+
     useEffect(() => {
-      const base = getFirestore();
-
-      const q = doc(base, "items", idItem)
-
       getDoc(q).then((item) => {
           if(item.exists()){
             setDetail({...item.data()});
