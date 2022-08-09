@@ -9,8 +9,8 @@ import { getFirestore, collection, getDocs, addDoc, setDoc, doc } from 'firebase
 function ItemListContainer() {
   const [info, setInfo] = useState([])
   const {cat} = useParams();
-  const [data, setData] = useState([])
-  const [idItem, setIdItem] = useState("");
+  //const [data, setData] = useState([])
+  //const [idItem, setIdItem] = useState("");
   const base = getFirestore();
   //console.log(id);
 

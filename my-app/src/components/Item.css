@@ -11,7 +11,6 @@
 
 .Card img {
     border-radius: 15px;
-    margin-left: 8px;
     height: 200px;
     width: 240px;
 }
@@ -38,4 +37,9 @@
     font-weight: bold;
     font-style: italic;
     color: blueviolet;
+}
+
+.Detalle:hover {
+    background-color: white;
+    color: #ffcc00;
 }

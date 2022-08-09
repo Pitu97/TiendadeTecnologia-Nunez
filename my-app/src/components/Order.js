@@ -54,8 +54,10 @@ function Order() {
     }
 
     return (
+        <>
+        <h2>ORDEN DE COMPRA</h2>
         <div className='order'>
-            {!comprado && <><ul>
+            {!comprado && <><div className='bloques'><ul>
                 {cart && cart.map(e => <li>
                     <div className='item'>
                         <p>Producto: {e.item.nombre}</p>
@@ -66,6 +68,8 @@ function Order() {
             </ul>
             <p>Cant. total de productos: {totalQ}</p>
             <p>Precio total: ${totalP}</p>
+            </div>
+            <div className='bloques'>
             <form onSubmit={submitHandler} className='formulario'>
                 <label>Nombre</label>
                 <input type='text' placeholder='nombre' value={newName} onChange={nameHandler}/>
@@ -74,11 +78,12 @@ function Order() {
                 <label>Telefono</label>
                 <input type='number' placeholder='telefono'value={newPhone} onChange={phoneHandler}/>
                 <button type='submit'>Enviar</button>
-            </form></>}
-            {comprado && <div><h2>Compra Realizada</h2>
+            </form></div></>}
+            {comprado && <div><h2>Gracias por su compra!</h2>
+                <h3>COMPRA FINALIZADA</h3>
                 <p>Nro de orden: {orderId}</p>
-                <Link to="/"><button>Volver</button></Link></div>}
-        </div>
+                <Link to="/"><button className='btn'>Volver</button></Link></div>}
+        </div></>
     );
 }
 
