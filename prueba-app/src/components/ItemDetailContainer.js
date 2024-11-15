@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import './ItemDetailContainer.css';
 import { useParams } from 'react-router-dom';
+//import { getFirestore, doc, getDoc } from "firebase/firestore";
 import datos from '../components/data/datos';
 
 function ItemDetailContainer() {
@@ -38,3 +39,15 @@ function ItemDetailContainer() {
   }
   
   export default ItemDetailContainer; 
+
+ /* const base = getFirestore();
+
+  const q = doc(base, "items", idItem)
+
+  useEffect(() => {
+    getDoc(q).then((item) => {
+        if(item.exists()){
+          setDetail({...item.data()});
+        }
+    })
+  }, []) */

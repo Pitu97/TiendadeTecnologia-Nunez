@@ -7,7 +7,7 @@ function Item(props) {
   return (
     <div className='Card'>
       <div>
-        <img src={props.img2} atl="imagen" />  
+        <img src={props.img2} alt="imagen" />  
         <h4>{props.nombre}</h4>
       </div>
       <div>
